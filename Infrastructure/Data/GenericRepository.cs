@@ -21,9 +21,9 @@ public class GenericRepository<T>(StoreContext context) : IGenericRepository<T> 
         return await context.Set<T>().FindAsync(id);
     }
 
-    public async Task<T?> GetEntityWithSpec(ISpecification<T> spec)
+    public async Task<T?> GetEntityWithSpec(ISpecification<T> specification)
     {
-        return await ApplySpecification(spec).FirstOrDefaultAsync();
+        return await ApplySpecification(specification).FirstOrDefaultAsync();
     }
 
     public async Task<TResult?> GetEntityWithSpec<TResult>(ISpecification<T, TResult> specification)
@@ -36,9 +36,9 @@ public class GenericRepository<T>(StoreContext context) : IGenericRepository<T> 
         return await context.Set<T>().ToListAsync();
     }
 
-    public async Task<IReadOnlyList<T>> ListAsync(ISpecification<T> spec)
+    public async Task<IReadOnlyList<T>> ListAsync(ISpecification<T> specification)
     {
-        return await ApplySpecification(spec).ToListAsync();
+        return await ApplySpecification(specification).ToListAsync();
     }
 
     public async Task<IReadOnlyList<TResult>> ListAsync<TResult>(ISpecification<T, TResult> specification)
@@ -62,13 +62,13 @@ public class GenericRepository<T>(StoreContext context) : IGenericRepository<T> 
         context.Entry(entity).State = EntityState.Modified;
     }
 
-    private IQueryable<T> ApplySpecification(ISpecification<T> spec)
+    private IQueryable<T> ApplySpecification(ISpecification<T> specification)
     {
-        return SpecificationEvaluator<T>.GetQuery(context.Set<T>().AsQueryable(), spec);
+        return SpecificationEvaluator<T>.GetQuery(context.Set<T>().AsQueryable(), specification);
     }
 
-    private IQueryable<TResult> ApplySpecification<TResult>(ISpecification<T, TResult> spec)
+    private IQueryable<TResult> ApplySpecification<TResult>(ISpecification<T, TResult> specification)
     {
-        return SpecificationEvaluator<T>.GetQuery<T, TResult>(context.Set<T>().AsQueryable(), spec);
+        return SpecificationEvaluator<T>.GetQuery<T, TResult>(context.Set<T>().AsQueryable(), specification);
     }
 }

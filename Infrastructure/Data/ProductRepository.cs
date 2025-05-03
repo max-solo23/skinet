@@ -60,7 +60,7 @@ public class ProductRepository(StoreContext context) : IProductRepository
 
     public bool ProductExists(int id)
     {
-        return context.Products.Any(p => p.Id == id);
+        return context.Products.Any(product => product.Id == id);
     }
 
     public async Task<bool> SaveChangesAsync()
