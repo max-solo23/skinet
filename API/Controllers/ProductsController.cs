@@ -1,4 +1,5 @@
 using System;
+using API.RequestHelpers;
 using Core.Entities;
 using Core.Interfaces;
 using Core.Specifications;
@@ -17,10 +18,17 @@ public class ProductsController(IGenericRepository<Product> repository) : Contro
         [FromQuery]ProductSpecificationParams specificationParams)
     {
         var specification = new ProductSpecification(specificationParams);
-
+        var count = await repository.CountAsync(specification);
         var products = await repository.ListAsync(specification);
 
-        return Ok(products);
+        var pagination = new Pagination<Product>(
+            specificationParams.PageIndex,
+            specificationParams.PageSize,
+            count,
+            products);
+
+
+        return Ok(pagination);
     }
     
     [HttpGet("{id:int}")] // api/products/2
