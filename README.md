@@ -9,7 +9,7 @@ It follows a **clean architecture** approach with separate API, Core, and Infras
 ## ✨ Features
 
 - ASP.NET Core Web API (Backend)
-- Angular Frontend (Planned)
+- Angular Frontend
 - Entity Framework Core with Migrations
 - Clean and Modular Project Structure
 - Basic E-commerce functionality:
@@ -45,13 +45,12 @@ It follows a **clean architecture** approach with separate API, Core, and Infras
 
 ## 🧪 Technologies Used
 
-- C# / ASP.NET Core 8
-- Angular (Planned)
+- C# / ASP.NET Core 9
+- Angular
 - Entity Framework Core
 - SQL Server
-- AutoMapper
 - Repository Pattern
-- Unit of Work Pattern
+- Specification Pattern
 - JWT Authentication (Planned)
 
 ```
