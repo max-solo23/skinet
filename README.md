@@ -9,7 +9,7 @@ It follows a **clean architecture** approach with separate API, Core, and Infras
 ## ✨ Features
 
 - ASP.NET Core Web API (Backend)
-- Angular Frontend (Planned)
+- Angular Frontend
 - Entity Framework Core with Migrations
 - Clean and Modular Project Structure
 - Basic E-commerce functionality:
@@ -24,15 +24,15 @@ It follows a **clean architecture** approach with separate API, Core, and Infras
 
 ### Prerequisites
 
-- [.NET 8 SDK](https://dotnet.microsoft.com/download)
-- [Node.js](https://nodejs.org/) and Angular CLI (for frontend)
+- [.NET 9 SDK](https://dotnet.microsoft.com/download)
+- [Node.js](https://nodejs.org/) and Angular (for frontend)
 - SQL Server (LocalDB or Full)
 
 ## 🛠️ TODO List
 
 - [x] Setup ASP.NET Core backend structure
-- [ ] Implement Catalog API endpoints
-- [ ] Create Angular frontend project
+- [x] Implement Catalog API endpoints
+- [x] Create Angular frontend project
 - [ ] Connect frontend to backend API
 - [ ] Implement JWT Authentication
 - [ ] Implement Shopping Basket logic
@@ -45,13 +45,12 @@ It follows a **clean architecture** approach with separate API, Core, and Infras
 
 ## 🧪 Technologies Used
 
-- C# / ASP.NET Core 8
-- Angular (Planned)
+- C# / ASP.NET Core 9
+- Angular
 - Entity Framework Core
 - SQL Server
-- AutoMapper
 - Repository Pattern
-- Unit of Work Pattern
+- Specification Pattern
 - JWT Authentication (Planned)
 
 ```
