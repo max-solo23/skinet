@@ -24,15 +24,15 @@ It follows a **clean architecture** approach with separate API, Core, and Infras
 
 ### Prerequisites
 
-- [.NET 8 SDK](https://dotnet.microsoft.com/download)
-- [Node.js](https://nodejs.org/) and Angular CLI (for frontend)
+- [.NET 9 SDK](https://dotnet.microsoft.com/download)
+- [Node.js](https://nodejs.org/) and Angular (for frontend)
 - SQL Server (LocalDB or Full)
 
 ## 🛠️ TODO List
 
 - [x] Setup ASP.NET Core backend structure
-- [ ] Implement Catalog API endpoints
-- [ ] Create Angular frontend project
+- [x] Implement Catalog API endpoints
+- [x] Create Angular frontend project
 - [ ] Connect frontend to backend API
 - [ ] Implement JWT Authentication
 - [ ] Implement Shopping Basket logic
