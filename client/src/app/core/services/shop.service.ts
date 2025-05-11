@@ -11,6 +11,6 @@ export class ShopService {
     private http = inject(HttpClient);
 
     getProduct() {
-      return this.http.get<Pagination<Product>>(this.baseUrl + 'products')
+      return this.http.get<Pagination<Product>>(this.baseUrl + 'products?pageSize=20')
     }
 }
