@@ -27,7 +27,7 @@ export class AccountService {
     })
   }
 
-  logut() {
+  logout() {
     return this.http.post(this.baseUrl + 'account/logout', {}, {withCredentials: true});
   }
 
